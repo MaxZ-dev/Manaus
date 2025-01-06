@@ -1,0 +1,101 @@
+
+.space-grotesk {
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+}
+.body_container {
+    height: 100vh;
+    font-family: Montserrat;
+    margin: 0 4%;
+}
+
+
+/*image*/
+.logo_nav {
+    width: 240px;
+}
+
+/*image_end*/
+
+/*header*/
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 180px;
+    border-bottom: 1px solid black;
+}
+
+.navigation_container {
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#Request_a_quote {
+    border-radius: 14px;
+    background-color: white;
+    border-color: black;
+}
+
+/*animation_a*/
+.nav_a {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.nav_a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: black; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.nav_a:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: rgba(185, 255, 102, 1); /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+/*animation_a_end*/
+/*header_end*/
+/*main*/
+.cover_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.cover_container img {
+    width: 50vw;
+    padding-left: 5px;
+}
+.banner_title {
+    width: 50vw;
+    padding-right: 5px;
+}
+/*main_end*/
