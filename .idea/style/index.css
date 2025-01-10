@@ -1,0 +1,233 @@
+.body_container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 4%;
+}
+
+/*header*/
+header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 180px;
+    border-bottom: 1px solid #191a23;
+    font-size: 20px;
+    color: black;
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo_nav {
+    width: 240px;
+}
+
+.navigation_container {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#menu {
+    display: none;
+    height: 100%;
+    background-color: white;
+    border: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+#request_a_quote {
+    height: 100%;
+    width: 231px;
+    border-radius: 14px;
+    border-color: #191a23;
+
+    &:hover {
+        background-color: #b9ff66;
+        border-radius: 30px;
+        transition: 1s;
+        cursor: pointer;
+    }
+}
+
+/*animation_a*/
+.nav_a {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav_a:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: #191a23; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.nav_a:hover:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: #b9ff66; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+@media (max-width: 1250px) {
+    .navigation_container .navigation_bar {
+        display: none;
+    }
+
+    #request_a_quote {
+        display: none;
+    }
+
+    #menu {
+        display: inline;
+    }
+}
+
+/*animation_a_end*/
+/*header_end*/
+
+/*main*/
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+#main_banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#tittle_img, .banner_title  {
+    width: 50%
+}
+
+#book_a_consultation {
+    border-radius: 14px;
+    background-color: rgba(25, 26, 35, 1);
+    border-color: rgba(25, 26, 35, 1);
+    color: white;
+    height: 68px;
+    width: 264px;
+
+    &:hover {
+        background-color: var(--green);
+        border-radius: 30px;
+        transition: 1s;
+        color: black;
+        cursor: pointer;
+    }
+}
+
+/*main_end*/
+
+/*footer*/
+footer {
+    flex-shrink: 0;
+    height: 450px;
+    border-radius: 50px 50px 0px 0px;
+    background-color: #191a23;
+    padding: 20px 60px;
+    color: white;
+}
+
+.footer_navigation_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.contact_info_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 185px;
+}
+
+footer .nav_a:after {
+    background-color: white;
+}
+
+.contact h4 {
+    display: inline;
+    border-radius: 7px;
+    background-color: #b9ff66;
+    padding: 3px;
+    color: #191a23;
+    font-weight: bold;
+}
+
+.subscribe_shape {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 20px;
+
+}
+
+#input_subscribe, #button_subscribe {
+    width: 285px;
+    height: 68px;
+    border-radius: 14px;
+    font-size: 20px;
+}
+
+#input_subscribe {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+
+#button_subscribe {
+    background-color: #b9ff66;
+    border: 1px solid #b9ff66;;
+
+    &:hover {
+        background-color: white;
+        border-radius: 30px;
+        transition: 1s;
+        cursor: pointer;
+    }
+}
+
+.all_Rights_Reserved {
+    border-top: 1px solid white;
+    padding: 60px 0px;
+    color: inherit;
+}
+
+@media (max-width: 1250px) {
+    .subscribe_shape {
+        flex-direction: column;
+    }
+}
+
+/*footer_end*/
